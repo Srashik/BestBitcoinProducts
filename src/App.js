@@ -13,6 +13,7 @@ import ImportExportIcon from '@material-ui/icons/ImportExport';
 import ComputerIcon from '@material-ui/icons/Computer';
 import HttpIcon from '@material-ui/icons/Http';
 import Footer from './Components/Footer'
+import { Component } from 'react';
 
 
 
@@ -64,8 +65,19 @@ const styles = makeStyles({
   },
 })
 
+
+
+
+ 
+
 function App() {
+
+  
+
+
   const classes = styles();
+
+  
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
@@ -89,6 +101,7 @@ function App() {
           <Grid icon={<HttpIcon style={{fill: "#2EA09D", height:"125", width:"125"}}/>} title="Connected" btnTitle="Show me More"/>
         </div>      
         <div className={classes.bigSpace}>
+        <p className="App-intro">;{this.state.apiResponse}</p>
           <Footer/>
         </div>
       </ThemeProvider>
