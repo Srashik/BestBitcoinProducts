@@ -47,18 +47,18 @@ function Navbar() {
                    About
                 </Typography>
                 <Typography variant="h6" className={classes.menuItem}>
-                    Blog
+                    News
                 </Typography>
                 <Typography variant="h6" className={classes.menuItem}>
-                    Careers
+                    Shop
                 </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
+                {/* <Typography variant="h6" className={classes.menuItem}>
                     Demos 
-                </Typography>
+                </Typography> */}
                 <Typography variant="h6" className={classes.menuItem}>
                     Contact Us 
                 </Typography>
-                <Custombutton txt="Trial Our Product"/>
+                <Custombutton txt="Login"/>
             </Toolbar>
     )
 }
