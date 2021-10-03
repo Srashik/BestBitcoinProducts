@@ -1,24 +1,17 @@
-
-
 import { createTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
+import {Typography} from '@material-ui/core'; 
+import NavBar from './Components/Navbar'
+import Grid from './Components/Grid'
+import Footer from './Components/Footer'
 import './App.css';
-import Navbar from './Components/Navbar';
-import Grid from './Components/Grid';
-import {Typography} from '@material-ui/core'
-//Custom components from materialUI
+//changes to imports 
 import SecurityIcon from '@material-ui/icons/Security';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 import ImportExportIcon from '@material-ui/icons/ImportExport';
 import ComputerIcon from '@material-ui/icons/Computer';
 import HttpIcon from '@material-ui/icons/Http';
-import Footer from './Components/Footer'
 import { Component } from 'react';
-
-
-
-
-
 
 const theme = createTheme({
   palette: {
@@ -65,26 +58,18 @@ const styles = makeStyles({
   },
 })
 
-
-
-
- 
-
 function App() {
+  const classes = styles(); 
 
-  
-
-
-  const classes = styles();
-
-  
   return (
+
+    
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Navbar/>
+        <NavBar/>
         <div className={classes.wrapper}>
           <Typography variant="h4" className={classes.bigSpace} color="primary">
-             At BBP you can find the latest technology of crypto gadgets and stay up to date with all crypto news! 
+             At BBP we are passionate about software
           </Typography>
           <Typography variant="h5" className={classes.littleSpace} color="primary">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sodales congue tristique. Cras non pretium sem. Duis interdum lorem sit amet ligula pretium, sed rutrum urna semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus egestas gravida ullamcorper.
@@ -99,14 +84,11 @@ function App() {
           <Grid icon={<ImportExportIcon style={{fill: "#5EA780", height:"125", width:"125"}}/>}  title="Modular" btnTitle="Show me More"/>
           <Grid icon={<ComputerIcon style={{fill: "#E69426", height:"125", width:"125"}}/>}  title="Multi-Platform" btnTitle="Show me More"/>
           <Grid icon={<HttpIcon style={{fill: "#2EA09D", height:"125", width:"125"}}/>} title="Connected" btnTitle="Show me More"/>
-        </div>      
+        </div>
         <div className={classes.bigSpace}>
-        <p className="App-intro">;{this.state.apiResponse}</p>
           <Footer/>
         </div>
       </ThemeProvider>
-        
-
     </div>
   );
 }
